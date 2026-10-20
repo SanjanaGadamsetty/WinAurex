@@ -7,11 +7,12 @@ on:
 
 jobs:
   simulate-traffic:
+    name: Simulate Traffic
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -30,3 +31,4 @@ jobs:
       - name: Run Traffic Simulator Bot
         working-directory: .github/scripts
         run: npm run start
+
